@@ -11,6 +11,17 @@
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		761780ED2CA45674006654EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761780EC2CA45674006654EE /* AppDelegate.swift */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		8F2A7294C36542DFB356FD77 /* helper.js in Resources */ = {isa = PBXBuildFile; fileRef = 5EB064165CCF49FF8F8BF98D /* helper.js */; };
+		516B0B3019FE453B9322F701 /* EuclidCircularB-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5AA7B8EB104E418584D0AFC2 /* EuclidCircularB-Bold.ttf */; };
+		716A5C20DE2D4FF489E302B0 /* EuclidCircularB-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E15AC34E7AA245D5B64F99F3 /* EuclidCircularB-BoldItalic.ttf */; };
+		F240C80B3F79407CA27C239E /* EuclidCircularB-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4A8025A969974EA6891533CB /* EuclidCircularB-Italic.ttf */; };
+		FD2130D350B0450D9D984C1C /* EuclidCircularB-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6C1D20F35DC2488E98E715F8 /* EuclidCircularB-Light.ttf */; };
+		62231699EFBA4FADB2AE3796 /* EuclidCircularB-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B3F1E557A31B4B38BFB493C7 /* EuclidCircularB-LightItalic.ttf */; };
+		A60E9EF5EE414F6D9C685864 /* EuclidCircularB-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F62116F017154BC597F85B36 /* EuclidCircularB-Medium.ttf */; };
+		15514A9FEB1F444EADCFE0C6 /* EuclidCircularB-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8559771204B34DDD9F77420C /* EuclidCircularB-MediumItalic.ttf */; };
+		91153EFBE81F42EFB79020AB /* EuclidCircularB-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A197919963F04F45A0DD351C /* EuclidCircularB-Regular.ttf */; };
+		22628491500341928C7DEB1F /* EuclidCircularB-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 895C0842839A4DFD81D4B548 /* EuclidCircularB-SemiBold.ttf */; };
+		9C81DCC1529C41529BE6144A /* EuclidCircularB-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 295270A9B32B4B738CD8FC6D /* EuclidCircularB-SemiBoldItalic.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +35,17 @@
 		761780EC2CA45674006654EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = AwesomeProject/AppDelegate.swift; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = AwesomeProject/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		5EB064165CCF49FF8F8BF98D /* helper.js */ = {isa = PBXFileReference; name = "helper.js"; path = "../assets/fonts/helper.js"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		5AA7B8EB104E418584D0AFC2 /* EuclidCircularB-Bold.ttf */ = {isa = PBXFileReference; name = "EuclidCircularB-Bold.ttf"; path = "../assets/fonts/EuclidCircularB-Bold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		E15AC34E7AA245D5B64F99F3 /* EuclidCircularB-BoldItalic.ttf */ = {isa = PBXFileReference; name = "EuclidCircularB-BoldItalic.ttf"; path = "../assets/fonts/EuclidCircularB-BoldItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		4A8025A969974EA6891533CB /* EuclidCircularB-Italic.ttf */ = {isa = PBXFileReference; name = "EuclidCircularB-Italic.ttf"; path = "../assets/fonts/EuclidCircularB-Italic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		6C1D20F35DC2488E98E715F8 /* EuclidCircularB-Light.ttf */ = {isa = PBXFileReference; name = "EuclidCircularB-Light.ttf"; path = "../assets/fonts/EuclidCircularB-Light.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		B3F1E557A31B4B38BFB493C7 /* EuclidCircularB-LightItalic.ttf */ = {isa = PBXFileReference; name = "EuclidCircularB-LightItalic.ttf"; path = "../assets/fonts/EuclidCircularB-LightItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		F62116F017154BC597F85B36 /* EuclidCircularB-Medium.ttf */ = {isa = PBXFileReference; name = "EuclidCircularB-Medium.ttf"; path = "../assets/fonts/EuclidCircularB-Medium.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		8559771204B34DDD9F77420C /* EuclidCircularB-MediumItalic.ttf */ = {isa = PBXFileReference; name = "EuclidCircularB-MediumItalic.ttf"; path = "../assets/fonts/EuclidCircularB-MediumItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		A197919963F04F45A0DD351C /* EuclidCircularB-Regular.ttf */ = {isa = PBXFileReference; name = "EuclidCircularB-Regular.ttf"; path = "../assets/fonts/EuclidCircularB-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		895C0842839A4DFD81D4B548 /* EuclidCircularB-SemiBold.ttf */ = {isa = PBXFileReference; name = "EuclidCircularB-SemiBold.ttf"; path = "../assets/fonts/EuclidCircularB-SemiBold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		295270A9B32B4B738CD8FC6D /* EuclidCircularB-SemiBoldItalic.ttf */ = {isa = PBXFileReference; name = "EuclidCircularB-SemiBoldItalic.ttf"; path = "../assets/fonts/EuclidCircularB-SemiBoldItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +96,7 @@
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				BBD78D7AC51CEA395F1C20DB /* Pods */,
+				B98A91E2FF6C4CE9B2BFD642 /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -96,6 +119,25 @@
 			);
 			path = Pods;
 			sourceTree = "<group>";
+		};
+		B98A91E2FF6C4CE9B2BFD642 /* Resources */ = {
+			isa = "PBXGroup";
+			children = (
+				5EB064165CCF49FF8F8BF98D /* helper.js */,
+				5AA7B8EB104E418584D0AFC2 /* EuclidCircularB-Bold.ttf */,
+				E15AC34E7AA245D5B64F99F3 /* EuclidCircularB-BoldItalic.ttf */,
+				4A8025A969974EA6891533CB /* EuclidCircularB-Italic.ttf */,
+				6C1D20F35DC2488E98E715F8 /* EuclidCircularB-Light.ttf */,
+				B3F1E557A31B4B38BFB493C7 /* EuclidCircularB-LightItalic.ttf */,
+				F62116F017154BC597F85B36 /* EuclidCircularB-Medium.ttf */,
+				8559771204B34DDD9F77420C /* EuclidCircularB-MediumItalic.ttf */,
+				A197919963F04F45A0DD351C /* EuclidCircularB-Regular.ttf */,
+				895C0842839A4DFD81D4B548 /* EuclidCircularB-SemiBold.ttf */,
+				295270A9B32B4B738CD8FC6D /* EuclidCircularB-SemiBoldItalic.ttf */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+			path = "";
 		};
 /* End PBXGroup section */
 
@@ -159,6 +201,17 @@
 			files = (
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				8F2A7294C36542DFB356FD77 /* helper.js in Resources */,
+				516B0B3019FE453B9322F701 /* EuclidCircularB-Bold.ttf in Resources */,
+				716A5C20DE2D4FF489E302B0 /* EuclidCircularB-BoldItalic.ttf in Resources */,
+				F240C80B3F79407CA27C239E /* EuclidCircularB-Italic.ttf in Resources */,
+				FD2130D350B0450D9D984C1C /* EuclidCircularB-Light.ttf in Resources */,
+				62231699EFBA4FADB2AE3796 /* EuclidCircularB-LightItalic.ttf in Resources */,
+				A60E9EF5EE414F6D9C685864 /* EuclidCircularB-Medium.ttf in Resources */,
+				15514A9FEB1F444EADCFE0C6 /* EuclidCircularB-MediumItalic.ttf in Resources */,
+				91153EFBE81F42EFB79020AB /* EuclidCircularB-Regular.ttf in Resources */,
+				22628491500341928C7DEB1F /* EuclidCircularB-SemiBold.ttf in Resources */,
+				9C81DCC1529C41529BE6144A /* EuclidCircularB-SemiBoldItalic.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

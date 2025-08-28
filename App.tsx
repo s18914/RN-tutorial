@@ -1,9 +1,21 @@
 import { FunctionComponent } from "react";
 import { Image, StyleSheet, Text, View } from "react-native";
 import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
+import { getFontFamily } from "./assets/fonts/helper";
+
+//import getFontFamily in your style.js file
+const style = StyleSheet.create({
+  text: {
+    fontFamily: getFontFamily("300"),
+    fontSize: 50,
+  },
+  text2: {
+    fontFamily: getFontFamily("700"),
+    fontSize: 50,
+  },
+});
 
 function App() {
-  //test
   return (
     <SafeAreaProvider>
       <SafeAreaView>
@@ -13,6 +25,8 @@ function App() {
             source={require("./cake.png")}
             style={{ width: 100, height: 100 }}
           />
+
+          <Text style={style.text}>Hello World!</Text>
 
           <Image
             source={{
@@ -37,18 +51,11 @@ const MyText: FunctionComponent<MyTextProps> = ({ name }) => {
   };
   return (
     <View>
-      <Text onPress={onPressEventHandler} style={styles.text}>
+      <Text onPress={onPressEventHandler} style={style.text2}>
         Hello {name}
       </Text>
     </View>
   );
 };
-
-const styles = StyleSheet.create({
-  text: {
-    color: "red",
-    fontSize: 20,
-  },
-});
 
 export default App;
