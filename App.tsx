@@ -1,9 +1,13 @@
 import { FunctionComponent } from "react";
-import { Image, StyleSheet, Text, View } from "react-native";
+import { Image, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
 import { getFontFamily } from "./assets/fonts/helper";
+import Title from "./components/title/Title";
+import { FontAwesomeIcon } from "@fortawesome/react-native-fontawesome";
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import globalStyle from "./assets/styles/globalStyle";
+import { IconProp } from "@fortawesome/fontawesome-svg-core";
 
-//import getFontFamily in your style.js file
 const style = StyleSheet.create({
   text: {
     fontFamily: getFontFamily("300"),
@@ -19,7 +23,21 @@ function App() {
   return (
     <SafeAreaProvider>
       <SafeAreaView>
-        <View>
+        <View style={globalStyle.header}>
+          <Title title={"Let’s Explore"} />
+          <TouchableOpacity style={globalStyle.messageIcon}>
+            <FontAwesomeIcon
+              icon={faEnvelope as IconProp}
+              size={20}
+              color={"#898DAE"}
+            />
+            <View style={globalStyle.messageNumberContainer}>
+              <Text style={globalStyle.messageNumber}>2</Text>
+            </View>
+          </TouchableOpacity>
+        </View>
+        {/* <View>
+          <Title title={"Let’s Explore"} />
           <MyText name="Mila" />
           <Image
             source={require("./cake.png")}
@@ -35,7 +53,7 @@ function App() {
             style={{ width: 100, height: 100 }}
             resizeMode="contain"
           />
-        </View>
+        </View> */}
       </SafeAreaView>
     </SafeAreaProvider>
   );
