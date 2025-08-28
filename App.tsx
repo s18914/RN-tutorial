@@ -3,7 +3,6 @@ import { Image, StyleSheet, Text, View } from "react-native";
 import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
 
 function App() {
-  //n
   return (
     <SafeAreaProvider>
       <SafeAreaView>
