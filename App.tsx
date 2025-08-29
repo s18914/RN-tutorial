@@ -1,5 +1,12 @@
 import { FunctionComponent } from "react";
-import { Image, StyleSheet, Text, TouchableOpacity, View } from "react-native";
+import {
+  FlatList,
+  Image,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View,
+} from "react-native";
 import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
 import { getFontFamily } from "./assets/fonts/helper";
 import Title from "./components/title/Title";
@@ -7,6 +14,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-native-fontawesome";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import globalStyle from "./assets/styles/globalStyle";
 import { IconProp } from "@fortawesome/fontawesome-svg-core";
+import userStories from "./data";
+import UserStory from "./components/userStory/UserStory";
 
 const style = StyleSheet.create({
   text: {
@@ -35,6 +44,19 @@ function App() {
               <Text style={globalStyle.messageNumber}>2</Text>
             </View>
           </TouchableOpacity>
+        </View>
+        <View style={globalStyle.userStoryContainer}>
+          <FlatList
+            showsHorizontalScrollIndicator={false}
+            horizontal={true}
+            data={userStories}
+            renderItem={({ item }) => (
+              <UserStory
+                firstName={item.firstName}
+                profileImage={item.profileImage}
+              />
+            )}
+          />
         </View>
         {/* <View>
           <Title title={"Let’s Explore"} />
