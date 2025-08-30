@@ -14,7 +14,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-native-fontawesome";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import globalStyle from "./assets/styles/globalStyle";
 import { IconProp } from "@fortawesome/fontawesome-svg-core";
-import userStories, { userPosts, UserStoryType } from "./data";
+import userStories, { userPosts, UserPostType, UserStoryType } from "./data";
 import UserStory from "./components/userStory/UserStory";
 import UserPost from "./components/userPost/UserPost";
 
@@ -38,20 +38,22 @@ function App() {
   const [isLoadingUserStories, setIsLoadingUserStories] = useState(false);
 
   //posts
-  const userPostsPageSize = 4;
+  const userPostsPageSize = 2;
   const [userPostsCurrentPage, setUserPostsCurrentPage] = useState(1);
-  const [userPostsRenderedData, setUserPostsRenderedData] = useState([]);
+  const [userPostsRenderedData, setUserPostsRenderedData] = useState<
+    UserPostType[]
+  >([]);
   const [isLoadingUserPosts, setIsLoadingUserPosts] = useState(false);
 
   const pagination = (
-    database: UserStoryType[],
+    database: UserPostType[] | UserStoryType[],
     currentPage: number,
     pageSize: number,
   ) => {
     const startIndex = (currentPage - 1) * pageSize;
     const endIndex = startIndex + pageSize;
     if (startIndex >= database.length) {
-      return [] as UserStoryType[];
+      return [];
     }
     return database.slice(startIndex, endIndex);
   };
@@ -61,6 +63,11 @@ function App() {
     const getInitialData = pagination(userStories, 1, userStoriesPageSize);
     setUserStoriesRenderedData(getInitialData);
     setIsLoadingUserStories(false);
+
+    setIsLoadingUserPosts(true);
+    const getInitialPostData = pagination(userPosts, 1, userPostsPageSize);
+    setUserPostsRenderedData(getInitialPostData);
+    setIsLoadingUserPosts(false);
   }, []);
 
   return (
@@ -119,7 +126,27 @@ function App() {
                 </View>
               </>
             }
-            data={userPosts}
+            data={userPostsRenderedData}
+            onEndReachedThreshold={0.5}
+            onEndReached={() => {
+              if (isLoadingUserPosts) {
+                return;
+              }
+              setIsLoadingUserPosts(true);
+              const contentToAppend = pagination(
+                userPosts,
+                userPostsCurrentPage + 1,
+                userPostsPageSize,
+              );
+              if (contentToAppend.length > 0) {
+                setUserPostsCurrentPage(userPostsCurrentPage + 1);
+                setUserPostsRenderedData((prev) => [
+                  ...prev,
+                  ...contentToAppend,
+                ]);
+              }
+              setIsLoadingUserPosts(false);
+            }}
             showsVerticalScrollIndicator={false}
             renderItem={({ item }) => (
               <View style={globalStyle.userPostContainer}>
