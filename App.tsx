@@ -1,5 +1,6 @@
 import { FunctionComponent, useEffect, useState } from "react";
 import {
+  Dimensions,
   FlatList,
   Image,
   StyleSheet,
@@ -30,6 +31,7 @@ const style = StyleSheet.create({
 });
 
 function App() {
+  const [screenData, setScreenData] = useState(Dimensions.get("screen"));
   const userStoriesPageSize = 4;
   const [userStoriesCurrentPage, setUserStoriesCurrentPage] = useState(1);
   const [userStoriesRenderedData, setUserStoriesRenderedData] = useState<
@@ -59,6 +61,10 @@ function App() {
   };
 
   useEffect(() => {
+    Dimensions.addEventListener("change", (result) => {
+      setScreenData(result.screen);
+    });
+
     setIsLoadingUserStories(true);
     const getInitialData = pagination(userStories, 1, userStoriesPageSize);
     setUserStoriesRenderedData(getInitialData);
@@ -66,6 +72,7 @@ function App() {
 
     setIsLoadingUserPosts(true);
     const getInitialPostData = pagination(userPosts, 1, userPostsPageSize);
+    //@ts-ignore
     setUserPostsRenderedData(getInitialPostData);
     setIsLoadingUserPosts(false);
   }, []);
@@ -140,6 +147,7 @@ function App() {
               );
               if (contentToAppend.length > 0) {
                 setUserPostsCurrentPage(userPostsCurrentPage + 1);
+                //@ts-ignore
                 setUserPostsRenderedData((prev) => [
                   ...prev,
                   ...contentToAppend,
