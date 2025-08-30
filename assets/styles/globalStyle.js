@@ -30,11 +30,14 @@ const globalStyle = StyleSheet.create({
   messageNumber: {
     color: "#FFFFFF",
     fontSize: 6,
-    fontFamily: getFontFamily("Inter", "600"),
+    fontFamily: getFontFamily("600"),
   },
   userStoryContainer: {
     marginTop: 20,
     marginHorizontal: 28,
+  },
+  userPostContainer: {
+    marginHorizontal: 24,
   },
 });
 
