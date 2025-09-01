@@ -3,7 +3,9 @@ import {
   Dimensions,
   FlatList,
   Image,
+  Platform,
   StyleSheet,
+  Switch,
   Text,
   TouchableOpacity,
   View,
@@ -32,7 +34,7 @@ const style = StyleSheet.create({
 });
 
 function App() {
-  const [screenData, setScreenData] = useState(Dimensions.get("screen"));
+  const [isOn, setIsOn] = useState(false);
   const userStoriesPageSize = 4;
   const [userStoriesCurrentPage, setUserStoriesCurrentPage] = useState(1);
   const [userStoriesRenderedData, setUserStoriesRenderedData] = useState<
@@ -93,6 +95,30 @@ function App() {
                       <Text style={globalStyle.messageNumber}>2</Text>
                     </View>
                   </TouchableOpacity>
+                </View>
+                <View
+                  style={{
+                    flex: 1,
+                    flexDirection: "row",
+                    justifyContent: "flex-start",
+                  }}
+                >
+                  <Switch
+                    value={isOn}
+                    style={
+                      Platform.OS === "android" && {
+                        transform: [{ scaleX: 1.5 }, { scaleY: 1.5 }],
+                      }
+                    }
+                    ios_backgroundColor={"#000"}
+                    trackColor={
+                      Platform.OS === "android" && {
+                        false: "grey",
+                        true: "red",
+                      }
+                    }
+                    onValueChange={(value) => setIsOn(value)}
+                  />
                 </View>
                 <View style={globalStyle.userStoryContainer}>
                   <FlatList
