@@ -61,10 +61,6 @@ function App() {
   };
 
   useEffect(() => {
-    Dimensions.addEventListener("change", (result) => {
-      setScreenData(result.screen);
-    });
-
     setIsLoadingUserStories(true);
     const getInitialData = pagination(userStories, 1, userStoriesPageSize);
     setUserStoriesRenderedData(getInitialData);
