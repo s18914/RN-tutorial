@@ -18,6 +18,7 @@ import { IconProp } from "@fortawesome/fontawesome-svg-core";
 import userStories, { userPosts, UserPostType, UserStoryType } from "./data";
 import UserStory from "./components/userStory/UserStory";
 import UserPost from "./components/userPost/UserPost";
+import { scaleFontSize } from "./scaling";
 
 const style = StyleSheet.create({
   text: {
@@ -85,7 +86,7 @@ function App() {
                   <TouchableOpacity style={globalStyle.messageIcon}>
                     <FontAwesomeIcon
                       icon={faEnvelope as IconProp}
-                      size={20}
+                      size={scaleFontSize(20)}
                       color={"#898DAE"}
                     />
                     <View style={globalStyle.messageNumberContainer}>

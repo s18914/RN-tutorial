@@ -10,6 +10,7 @@ import {
   faHeart,
   faMessage,
 } from "@fortawesome/free-regular-svg-icons";
+import { horizontalScale, scaleFontSize, verticalScale } from "../../scaling";
 
 interface UserPostProps {
   firstName: string;
@@ -29,7 +30,7 @@ const UserPost: FunctionComponent<UserPostProps> = (props) => {
         <View style={style.userContainer}>
           <UserProfileImage
             profileImage={props.profileImage}
-            imageDimensions={48}
+            imageDimensions={horizontalScale(48)}
           />
           <View style={style.userTextContainer}>
             <Text style={style.username}>
@@ -42,27 +43,29 @@ const UserPost: FunctionComponent<UserPostProps> = (props) => {
         </View>
         <FontAwesomeIcon
           icon={faEllipsisH as IconProp}
-          size={24}
+          size={scaleFontSize(24)}
           color={"#79869F"}
         />
       </View>
       <View style={style.postImage}>
         <Image source={props.image} />
       </View>
-      <View style={{ marginLeft: 10, flexDirection: "row" }}>
+      <View style={{ marginLeft: verticalScale(10), flexDirection: "row" }}>
         <View style={{ flexDirection: "row" }}>
           <FontAwesomeIcon icon={faHeart as IconProp} color={"#79869F"} />
-          <Text style={{ marginLeft: 3, color: "#79869F" }}>{props.likes}</Text>
+          <Text style={{ marginLeft: verticalScale(3), color: "#79869F" }}>
+            {props.likes}
+          </Text>
         </View>
-        <View style={{ flexDirection: "row", marginLeft: 27 }}>
+        <View style={{ flexDirection: "row", marginLeft: verticalScale(27) }}>
           <FontAwesomeIcon icon={faMessage as IconProp} color={"#79869F"} />
-          <Text style={{ marginLeft: 3, color: "#79869F" }}>
+          <Text style={{ marginLeft: verticalScale(3), color: "#79869F" }}>
             {props.comments}
           </Text>
         </View>
-        <View style={{ flexDirection: "row", marginLeft: 27 }}>
+        <View style={{ flexDirection: "row", marginLeft: verticalScale(27) }}>
           <FontAwesomeIcon icon={faBookmark as IconProp} color={"#79869F"} />
-          <Text style={{ marginLeft: 3, color: "#79869F" }}>
+          <Text style={{ marginLeft: verticalScale(3), color: "#79869F" }}>
             {props.bookmarks}
           </Text>
         </View>
