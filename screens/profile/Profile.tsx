@@ -3,6 +3,7 @@ import { Image, ScrollView, Text, TouchableOpacity, View } from "react-native";
 import globalStyle from "../../assets/styles/globalStyle";
 import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
 import style from "./style";
+import { ProfileTabsNavigation } from "../../navigation/MainNavigation";
 
 interface ProfileProp {
   navigation: any;
@@ -37,6 +38,9 @@ const Profile: FunctionComponent<ProfileProp> = ({ navigation }) => {
               <Text style={style.statAmount}>100</Text>
               <Text style={style.statType}>Posts</Text>
             </View>
+          </View>
+          <View style={globalStyle.flex}>
+            <ProfileTabsNavigation />
           </View>
         </ScrollView>
       </SafeAreaView>
