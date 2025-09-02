@@ -1,11 +1,5 @@
 import { FunctionComponent, useEffect, useState } from "react";
-import {
-  Dimensions,
-  FlatList,
-  Text,
-  TouchableOpacity,
-  View,
-} from "react-native";
+import { FlatList, Text, TouchableOpacity, View } from "react-native";
 import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
 import Title from "../../components/title/Title";
 import { FontAwesomeIcon } from "@fortawesome/react-native-fontawesome";
@@ -20,10 +14,15 @@ import userStories, {
 import UserStory from "../../components/userStory/UserStory";
 import UserPost from "../../components/userPost/UserPost";
 import { scaleFontSize } from "../../scaling";
-import { NavigationContainer } from "@react-navigation/native";
 
-function Home() {
-  const [screenData, setScreenData] = useState(Dimensions.get("screen"));
+import { Routes } from "../../navigation/Routes";
+import globalStyle from "../../assets/styles/globalStyle";
+
+interface HomeProp {
+  navigation: any;
+}
+
+const Home: FunctionComponent<HomeProp> = ({ navigation }) => {
   const userStoriesPageSize = 4;
   const [userStoriesCurrentPage, setUserStoriesCurrentPage] = useState(1);
   const [userStoriesRenderedData, setUserStoriesRenderedData] = useState<
@@ -67,7 +66,7 @@ function Home() {
 
   return (
     <SafeAreaProvider>
-      <SafeAreaView>
+      <SafeAreaView style={[globalStyle.backgroundWhite]}>
         <View>
           <FlatList
             ListHeaderComponent={
@@ -163,6 +162,6 @@ function Home() {
       </SafeAreaView>
     </SafeAreaProvider>
   );
-}
+};
 
 export default Home;
